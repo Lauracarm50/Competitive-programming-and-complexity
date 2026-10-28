@@ -27,16 +27,13 @@ int main(){
     vector<int> array_nums(n_elems);
     for(int i = 0; i < n_elems; i++){
         ss >> array_nums[i];
-        //CHECKPOINT
-        // cout << "Pos " << i << ": " << array_nums[i] << endl; 
     }
 
     //1.Sort function (O(n log n))
     sort(array_nums.begin(), array_nums.end());
 
        for(int i = 0; i < n_elems; i++){
-        //CHECKPOINT
-        // cout << " ORDENADO Pos " << i << ": " << array_nums[i] << endl; 
+
     }
 
     //2. Algorythm: groups of three with the smallest available and the two bigger available
@@ -50,13 +47,6 @@ int main(){
     long long current_sum = 0; 
     while(small_pos < big_pos){
         current_sum += array_nums[big_pos - 1];
-
-         //CHECKPOINT:
-        // cout << "small pos: " << small_pos << "\n Element small pos: " << array_nums[small_pos]
-        // << "\n Big pos: "  << big_pos << "\n Element big pos: "<< array_nums[big_pos] 
-        // << "\n Element big pos - 1: "<< array_nums[big_pos - 1]
-        // << "\n current sum: "<< current_sum << endl; 
-
 
         small_pos += 1;
         big_pos -= 2; 
